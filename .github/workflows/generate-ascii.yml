@@ -9,17 +9,8 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v6
 
-            - name: Install CowSay program
-              run: sudo apt install cowsay -y
-            
-            - name: Execute CowSay CMD
-              run: cowsay -f dragon "Run from the dragon always ... safe into the arms of Jesus" >> dragon.txt
-            
-            - name: Test File Exists
-              run: grep -i "dragon" dragon.txt
-
-            - name: Read File
-              run: cat dragon.txt
-            
-            - name: List Repo Files
+            - name: List Repo files
               run: ls -ltra
+
+            - name: Execute ASCII Script
+              run: ./ascii-script.sh
